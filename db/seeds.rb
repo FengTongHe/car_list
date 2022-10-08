@@ -47,10 +47,12 @@ models.each do |m|
   categories.each do |category_name|
     category = Category.find_or_create_by(name: category_name)
 
-
+    ModelCategory.create(model: model, category: category)
   end
 end
 
 puts "Created #{Manufacture.count} Manufacture"
 puts "Created #{Year.count} Year"
 puts "Created #{Model.count} Model"
+puts "Created #{Category.count} Category"
+puts "Created #{ModelCategory.count} Model Category"
