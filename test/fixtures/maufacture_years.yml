@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  year: MyString
+  year: 1
 
 two:
   name: MyString
-  year: MyString
+  year: 1

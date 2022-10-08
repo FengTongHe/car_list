@@ -1,0 +1,2 @@
+class MaufactureYear < ApplicationRecord
+end

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ManufactureYearTest < ActiveSupport::TestCase
+class MaufactureYearTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

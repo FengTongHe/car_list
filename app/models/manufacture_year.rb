@@ -1,2 +1,0 @@
-class ManufactureYear < ApplicationRecord
-end
