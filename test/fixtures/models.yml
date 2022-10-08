@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fuel: MyString
+  horsepower: 1
+  cylilnder: 1
+  transmission: MyString
+  driven_wheel: MyString
+  doors: 1
+  size: MyString
+  highway_mpg: 1
+  city_mpg: 1
+  popularity: 1
+  msrp: 1
+
+two:
+  name: MyString
+  fuel: MyString
+  horsepower: 1
+  cylilnder: 1
+  transmission: MyString
+  driven_wheel: MyString
+  doors: 1
+  size: MyString
+  highway_mpg: 1
+  city_mpg: 1
+  popularity: 1
+  msrp: 1
