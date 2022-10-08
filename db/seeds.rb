@@ -3,7 +3,6 @@ require "csv"
 ModelCategory.delete_all
 Category.delete_all
 Model.delete_all
-Style.delete_all
 Year.delete_all
 Manufacture.delete_all
 
@@ -18,10 +17,13 @@ models.each do |m|
 
   next unless manufacture && manufacture.valid?
 
-  style = manufacture.styles.create(name: m["Vehicle Style"])
-  year =  manufacture.years.create(year: m["Year"])
+  year = manufacture.years.create(year: m["Year"])
+end
 
-  next unless style && style.valid? && year && year.valid?
+models.each do |m|
+  year = Year.find_or_create_by(year: m["Year"])
+
+  next unless year && year.valid?
 
   model = year.models.create(
     name:         m["Model"],
@@ -31,17 +33,24 @@ models.each do |m|
     transmission: m["Transmission Type"],
     driven_wheel: m["Driven_Wheels"],
     door:         m["Number of Doors"],
+    style:        m["Vehicle Style"],
     size:         m["Size"],
     highway_mpg:  m["highway MPG"],
     city_mpg:     m["city mpg"],
     popularity:   m["Popularity"],
     msrp:         m["MSRP"]
   )
-
   puts "Invalid Model #{m['Model']}" unless model&.valid?
+
+  categories = m["Market Category"].split(",").map(&:strip)
+
+  categories.each do |category_name|
+    category = Category.find_or_create_by(name: category_name)
+
+
+  end
 end
 
 puts "Created #{Manufacture.count} Manufacture"
-puts "Created #{Style.count} Style"
 puts "Created #{Year.count} Year"
 puts "Created #{Model.count} Model"

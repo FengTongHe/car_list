@@ -41,24 +41,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_08_045800) do
     t.string "driven_wheel"
     t.integer "door"
     t.string "size"
+    t.string "style"
     t.integer "highway_mpg"
     t.integer "city_mpg"
     t.integer "popularity"
     t.integer "msrp"
-    t.integer "style_id", null: false
     t.integer "year_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["style_id"], name: "index_models_on_style_id"
     t.index ["year_id"], name: "index_models_on_year_id"
-  end
-
-  create_table "styles", force: :cascade do |t|
-    t.string "name"
-    t.integer "manufacture_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["manufacture_id"], name: "index_styles_on_manufacture_id"
   end
 
   create_table "years", force: :cascade do |t|
@@ -71,8 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_08_045800) do
 
   add_foreign_key "model_categories", "categories"
   add_foreign_key "model_categories", "models"
-  add_foreign_key "models", "styles"
   add_foreign_key "models", "years"
-  add_foreign_key "styles", "manufactures"
   add_foreign_key "years", "manufactures"
 end
