@@ -34,7 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_08_045800) do
 
   create_table "models", force: :cascade do |t|
     t.string "name"
-    t.string "fule"
+    t.string "fuel"
     t.integer "horsepower"
     t.integer "cylinder"
     t.string "transmission"

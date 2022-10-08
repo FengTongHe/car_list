@@ -2,7 +2,7 @@ class CreateModels < ActiveRecord::Migration[7.0]
   def change
     create_table :models do |t|
       t.string :name
-      t.string :fule
+      t.string :fuel
       t.integer :horsepower
       t.integer :cylinder
       t.string :transmission
