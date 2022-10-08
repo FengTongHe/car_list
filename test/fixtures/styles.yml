@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  manufacture: one
 
 two:
   name: MyString
+  manufacture: two

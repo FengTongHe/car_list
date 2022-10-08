@@ -2,28 +2,32 @@
 
 one:
   name: MyString
-  fuel: MyString
+  fule: MyString
   horsepower: 1
-  cylilnder: 1
+  cylinder: 1
   transmission: MyString
   driven_wheel: MyString
-  doors: 1
+  door: 1
   size: MyString
   highway_mpg: 1
   city_mpg: 1
   popularity: 1
   msrp: 1
+  style: one
+  year: one
 
 two:
   name: MyString
-  fuel: MyString
+  fule: MyString
   horsepower: 1
-  cylilnder: 1
+  cylinder: 1
   transmission: MyString
   driven_wheel: MyString
-  doors: 1
+  door: 1
   size: MyString
   highway_mpg: 1
   city_mpg: 1
   popularity: 1
   msrp: 1
+  style: two
+  year: two
