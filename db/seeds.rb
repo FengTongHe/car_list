@@ -17,11 +17,11 @@ models.each do |m|
 
   next unless manufacture && manufacture.valid?
 
-  year = manufacture.years.create(year: m["Year"])
+  year = manufacture.years.create(year: m["Year"], make: m["Make"])
 end
 
 models.each do |m|
-  year = Year.find_by(year: m["Year"])
+  year = Year.find_by(year: m["Year"], make: m["Make"])
   next unless year && year.valid?
 
   model = year.models.create(
