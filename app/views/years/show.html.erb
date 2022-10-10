@@ -1,6 +1,29 @@
 <h1><%= render @year %></h1>
-<ul>
-<% @year.models.each do |model| %>
-  <li><%= link_to model.name, model %></li>
-<% end %>
-</ul>
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Fuel</th>
+    <th>HP</th>
+    <th>Cylinders</th>
+    <th>Transmission</th>
+    <th>Driven wheels</th>
+    <th>Style</th>
+    <th>Highway MPG</th>
+    <th>City MPG</th>
+    <th>MSRP</th>
+  </tr>
+  <% @year.models.each do |model| %>
+    <tr>
+      <td><%= model.name %></td>
+      <td><%= model.fuel %></td>
+      <td><%= model.horsepower %></td>
+      <td><%= model.cylinder %></td>
+      <td><%= model.transmission %></td>
+      <td><%= model.driven_wheel %></td>
+      <td><%= model.style%></td>
+      <td><%= model.highway_mpg %></td>
+      <td><%= model.city_mpg %></td>
+      <td><%= model.msrp %></td>
+    </tr>
+  <% end %>
+</table>

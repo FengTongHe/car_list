@@ -1,7 +1,9 @@
 <h2><%= @manufacture.name %></h2>
 
 <ul>
-<% @manufacture.years.each do |year| %>
-  <li><%= link_to year.year, year %></li>
+<% @manufacture.years.each do |y| %>
+  <li>
+    <%= link_to y.year, y %>
+  </li>
 <% end %>
 <ul>
