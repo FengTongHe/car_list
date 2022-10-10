@@ -1,2 +1,6 @@
-<h1>Years#show</h1>
-<p><%= render @year %></p>
+<h1><%= render @year %></h1>
+<ul>
+<% @year.models.each do |model| %>
+  <li><%= link_to model.name, model %></li>
+<% end %>
+</ul>

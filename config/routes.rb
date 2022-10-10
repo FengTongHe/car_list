@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'models/index'
-  get 'models/show'
   root "manufactures#index"
 
   get "/manufactures", to: "manufactures#index"
@@ -8,6 +6,9 @@ Rails.application.routes.draw do
 
   get "years/index"
   get "years/show"
-
   resources :years, only: %i[index show]
+
+  get 'models/index'
+  get 'models/show'
+  resources :models, only: %i[index show]
 end

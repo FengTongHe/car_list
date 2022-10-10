@@ -21,8 +21,7 @@ models.each do |m|
 end
 
 models.each do |m|
-  year = Year.find_or_create_by(year: m["Year"])
-
+  year = Year.find_by(year: m["Year"])
   next unless year && year.valid?
 
   model = year.models.create(
