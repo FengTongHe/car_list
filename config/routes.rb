@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   get "models/index"
   get "models/show"
   resources :models, only: %i[index show]
+
+  get "about/index"
+  resources :about, only: %i[index]
 end

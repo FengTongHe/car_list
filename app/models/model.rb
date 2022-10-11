@@ -4,6 +4,7 @@ class Model < ApplicationRecord
   has_many :model_categories
   has_many :categories, through: :model_categories
 
-  # validates :name, :fuel, :horsepower, :cylinder, :transmission, :door, :size, :style,
-  #           presence: true
+  def self.year_and_model
+    @models = Model.left_joins(:year).order("year DESC")
+  end
 end

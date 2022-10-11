@@ -1,0 +1,9 @@
+<p class="mb-5">
+ Found <%= pluralize(@models.count, 'Model') %>  found when searching for: <%= params[:keywords] %>
+</p>
+
+<ul>
+  <% @models.each do |model| %>
+    <li><%= link_to model.title, model %></li>
+  <% end %>
+</ul>
