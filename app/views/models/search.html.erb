@@ -4,6 +4,7 @@
 
 <ul>
   <% @models.each do |model| %>
-    <li><%= link_to model.title, model %></li>
+    <em><%= model.year.year %></em>
+    <li><%= link_to model.name, model %></li>
   <% end %>
 </ul>
