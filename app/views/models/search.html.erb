@@ -4,7 +4,7 @@
 
 <ul>
   <% @models.each do |model| %>
-    <em><%= model.year.year %></em>
-    <li><%= link_to model.name, model %></li>
+    <% modelYear =  model.year.year.to_s + " " + model.name %>
+    <li><%= link_to modelYear, model %></li>
   <% end %>
 </ul>
