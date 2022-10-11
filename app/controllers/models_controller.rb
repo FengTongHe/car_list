@@ -1,6 +1,6 @@
 class ModelsController < ApplicationController
   def index
-    @models = Model.year_and_model
+    @models = Model.year_and_model.page(params[:page])
   end
 
   def show
