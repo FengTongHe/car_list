@@ -1,7 +1,21 @@
-<nav>
-  <ul>
-    <li><%= link_to "Manufacturers", manufactures_path %></li>
-    <li><%= link_to "About", about_index_path %></li>
-    <li><%= link_to "Models", models_path %></li>
-  </ul>
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <%= link_to "Manufacturers", manufactures_path %>
+      </div>
+
+      <div class="navbar-item">
+        <%= link_to "About", about_index_path %>
+      </div>
+
+      <div class="navbar-item">
+        <%= link_to "Models", models_path %>
+      </div>
+
+    </div>
+
+    <div class="navbar-end">
+    </div>
+  </div>
 </nav>
